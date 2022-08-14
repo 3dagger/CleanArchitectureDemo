@@ -13,4 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "CleanArchitectureDemoApplication"
-include ':app'
+include(":app")
+include(":domain")
+include(":data")
