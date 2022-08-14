@@ -58,6 +58,9 @@ dependencies {
     implementation(Dependencies.AndroidSupport.LifeCycle.Runtime)
 
 
+    implementation("androidx.activity:activity-ktx:1.5.1")
+
+
     implementation(Dependencies.Coroutines.Core)
     implementation(Dependencies.Coroutines.Android)
     implementation(Dependencies.Kotlin.StdLib)
