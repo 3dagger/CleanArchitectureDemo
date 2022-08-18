@@ -11,6 +11,8 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Essential.KotlinGradleVersion}")
         classpath("com.google.dagger:hilt-android-gradle-plugin:${Versions.Jetpack.HiltVersion}")
         classpath("de.mannodermaus.gradle.plugins:android-junit5:${Versions.Essential.JUnitGradleVersion}")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2")
+
     }
 }
 

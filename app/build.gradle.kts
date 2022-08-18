@@ -4,7 +4,7 @@ plugins {
     kotlin("kapt")
     id("de.mannodermaus.android-junit5")
     id("dagger.hilt.android.plugin")
-//    jacoco
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -52,14 +52,15 @@ dependencies {
     implementation(Dependencies.AndroidSupport.CardView)
     implementation(Dependencies.AndroidSupport.ViewPager2)
     implementation(Dependencies.AndroidSupport.RecyclerView)
+    implementation(Dependencies.AndroidSupport.ActivityKtx)
+    implementation(Dependencies.AndroidSupport.FragmentKtx)
+
+    implementation(Dependencies.AndroidSupport.Navigation.FragmentKtx)
+    implementation(Dependencies.AndroidSupport.Navigation.UiKtx)
 
     implementation(Dependencies.AndroidSupport.LifeCycle.ViewModelKtx)
     implementation(Dependencies.AndroidSupport.LifeCycle.LiveDataKtx)
     implementation(Dependencies.AndroidSupport.LifeCycle.Runtime)
-
-
-    implementation("androidx.activity:activity-ktx:1.5.1")
-
 
     implementation(Dependencies.Coroutines.Core)
     implementation(Dependencies.Coroutines.Android)
@@ -68,14 +69,10 @@ dependencies {
     implementation(Dependencies.Hilt.Android)
     kapt(Dependencies.Hilt.Compiler)
 
-
-
     implementation(Dependencies.Okhttp.OkHttp)
     implementation(Dependencies.Okhttp.LoggingInterceptor)
     implementation(Dependencies.Retrofit.Retrofit)
     implementation(Dependencies.Retrofit.GsonConverter)
-
-
 
     implementation(Dependencies.Glide.Glide)
     kapt(Dependencies.Glide.Compiler)
