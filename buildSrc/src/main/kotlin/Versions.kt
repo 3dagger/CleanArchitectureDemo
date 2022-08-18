@@ -16,6 +16,9 @@ object Versions {
 		const val ViewPager2Version = "1.0.0"
 		const val RecyclerViewVersion = "1.1.0"
 		const val LifeCycleVersion = "2.5.0"
+		const val ActivityKtxVersion = "1.5.1"
+		const val FragmentKtxVersion = "1.4.1"
+		const val NavigationVersion = "2.5.1"
 	}
 
 	object Okhttp {

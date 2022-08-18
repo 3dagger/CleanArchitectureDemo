@@ -5,14 +5,20 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kr.dagger.domain.repository.MovieRepository
-import kr.dagger.domain.usecase.GetMoviesPopularUseCase
+import kr.dagger.domain.usecase.GetMovieDetailUseCase
+import kr.dagger.domain.usecase.GetMoviePopularUseCase
 
 @InstallIn(SingletonComponent::class)
 @Module
 object UseCaseModule {
 
 	@Provides
-	fun provideGetMoviesPopularUseCase(repository: MovieRepository): GetMoviesPopularUseCase {
-		return GetMoviesPopularUseCase(movieRepository = repository)
+	fun provideGetMoviesPopularUseCase(repository: MovieRepository): GetMoviePopularUseCase {
+		return GetMoviePopularUseCase(movieRepository = repository)
+	}
+
+	@Provides
+	fun provideGetMovieDetailUseCase(repository: MovieRepository) : GetMovieDetailUseCase {
+		return GetMovieDetailUseCase(movieRepository = repository)
 	}
 }

@@ -5,19 +5,17 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kr.dagger.data.remote.MovieApiService
-import kr.dagger.data.remote.MovieDataSourceImpl
 import kr.dagger.data.remote.MovieDataSource
-import kr.dagger.data.repository.MovieRepositoryImpl
-import kr.dagger.domain.repository.MovieRepository
+import kr.dagger.data.remote.MovieDataSourceImpl
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
-object RepositoryModule {
+object DataSourceImplModule {
 
 	@Provides
 	@Singleton
-	fun provideMovieRepository(movieDataSource: MovieDataSource): MovieRepository {
-		return MovieRepositoryImpl(movieDataSource)
+	fun provideMovieDataSource(movieApiService: MovieApiService): MovieDataSource {
+		return MovieDataSourceImpl(movieApiService)
 	}
 }

@@ -5,7 +5,7 @@ import kr.dagger.domain.model.MoviePopular
 import kr.dagger.domain.model.Response
 import kr.dagger.domain.repository.MovieRepository
 
-class GetMoviesPopularUseCase(private val movieRepository: MovieRepository) {
+class GetMoviePopularUseCase(private val movieRepository: MovieRepository) {
 
 	suspend operator fun invoke(): Flow<Response<MoviePopular>> {
 		return movieRepository.getMoviesPopular()

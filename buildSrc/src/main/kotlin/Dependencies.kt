@@ -17,6 +17,13 @@ object Dependencies {
 		const val CardView = "androidx.cardview:cardview:${Versions.AndroidSupport.CardViewVersion}"
 		const val ViewPager2 = "androidx.viewpager2:viewpager2:${Versions.AndroidSupport.ViewPager2Version}"
 		const val RecyclerView = "androidx.recyclerview:recyclerview:${Versions.AndroidSupport.RecyclerViewVersion}"
+		const val ActivityKtx = "androidx.activity:activity-ktx:${Versions.AndroidSupport.ActivityKtxVersion}"
+		const val FragmentKtx = "androidx.fragment:fragment-ktx:${Versions.AndroidSupport.FragmentKtxVersion}"
+
+		object Navigation {
+			const val FragmentKtx = "androidx.navigation:navigation-fragment-ktx:${Versions.AndroidSupport.NavigationVersion}"
+			const val UiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.AndroidSupport.NavigationVersion}"
+		}
 
 		object LifeCycle {
 			const val ViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.AndroidSupport.LifeCycleVersion}"
